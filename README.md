@@ -1,11 +1,11 @@
 ##### 基于Golang的轻量级IoC容器。
 
-
 #### 安装
-go get 
+go get -u github.com/Abb1513/injector
 
 #### 使用
 ```go
+package main
 type UserService struct {
     Order *OrderService `inject:"-"`
 }
@@ -25,6 +25,7 @@ func NewUserService() *UserService {
 
 #### 单例注入写法
 ```go
+package main
 type  UserService struct {
     Order *OrderService `inject:"-"`
 }
@@ -32,8 +33,8 @@ type  UserService struct {
 
 #### 使用初始化
 ```go
-        
-    BeanFactoryImp.Set(service.NewOrderService())
+        package main
+        BeanFactoryImp.Set(service.NewOrderService())
 	c := service.NewUserService()
 	BeanFactoryImp.Apply(c)
 	t.Logf("%+v", c.Order)
