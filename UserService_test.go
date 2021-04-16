@@ -8,7 +8,7 @@
 package main
 
 import (
-	"Injector/service"
+	"injector/service"
 	"testing"
 )
 
