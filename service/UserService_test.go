@@ -5,10 +5,10 @@
 @Software: GoLand
 */
 
-package main
+package service
 
 import (
-	"injector/service"
+	"github.com/Abb1513/injector/service"
 	"testing"
 )
 
