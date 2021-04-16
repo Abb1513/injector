@@ -5,7 +5,7 @@
 @Software: GoLand
 */
 
-package main
+package injector
 
 import (
 	"reflect"

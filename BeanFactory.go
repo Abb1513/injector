@@ -5,7 +5,7 @@
 @Software: GoLand
 */
 
-package main
+package injector
 
 import "reflect"
 
@@ -64,11 +64,8 @@ func (this *BeanFactory) Apply(bean interface{}) {
 			getValue := this.Get(field.Type)
 			if getValue != nil {
 				v.Field(i).Set(reflect.ValueOf(getValue))
-			//	this.Apply(getValue)
+				//	this.Apply(getValue)
 			}
 		}
 	}
 }
-
-
-
